@@ -141,24 +141,28 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Weeks << <a href='Weeks.html'>Previous</a> <a href='W9.html'>Next</a> >> W9<br /><h1>W2-W8</h1>
-<p>建立倉儲及網站</p>
-<div>
-<div>登入 github 帳號後, 連結到 <a href="https://classroom.github.com/a/JReQZv6g" rel="noreferrer noopener" tabindex="-1" target="_blank" title="https://classroom.github.com/a/jreqzv6g">https://classroom.github.com/a/JReQZv6g</a> 取得 site 作業</div>
-<div>(如果沒有登記到 <a href="https://github.com/mdecycu/studlist/blob/main/2023spring/1a.txt" rel="noreferrer noopener" tabindex="-1" target="_blank" title="https://github.com/mdecycu/studlist/blob/main/2023spring/1a.txt">https://github.com/mdecycu/studlist/blob/main/2023spring/1a.txt</a>  需要透過 pull requests 合併進去
-<div>
-<div></div>
-<div><span>pull requests 過程:</span></div>
-<div><span><span>1.連結到 </span></span><a href="https://github.com/mdecycu/studlist" rel="noreferrer noopener" tabindex="-1" target="_blank" title="https://github.com/mdecycu/studlist">https://github.com/mdecycu/studlist</a> fork 到個人倉儲下
-<div>2. acp 後，建立一個 Pull Requests，沒有問題老師就會將內容合併</div>
-</div>
-</div>
-</div>
-</div>
-<p>使用token維護倉儲</p>
-<p></p>
-<p>New Bing</p>
-<br />Weeks << <a href='Weeks.html'>Previous</a> <a href='W9.html'>Next</a> >> W9</div>
+    <div id="tipue_search_content">W2-W8 << <a href='W2-W8.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython<br /><h1>W9</h1>
+<p>第五週考試</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#考試資料
+url = "https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/239f4eb84715978daead6ac1f231af7f190a2a5e/1aw5.txt"
+#打開考試資料後讀取並去除換行(\n)得到data
+data = open(url).read().split("\n")
+#清除第一個元素(1a w5)後得到新的data
+data = data[1:]
+for i in data:
+    #變數i去除:後分割成兩的元素，選取第一的元素學號得到stud
+    stud = i.split(":")[0]
+    #變數i去除:後分割成兩的元素，選取第二的元素學號得到score
+    score = i.split(":")[1]
+    try:
+    #分數是整數就顯示出來，不行就顯示0
+        score = int(score)
+    except: 
+        score=0
+    #印出(學號,分數)
+    print(stud,score)</pre>
+<p><br/><br/></p>
+<p></p><br />W2-W8 << <a href='W2-W8.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
         
     <!-- footer -->
       <div class="container">
